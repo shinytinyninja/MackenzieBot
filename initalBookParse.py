@@ -1,16 +1,23 @@
 from bs4 import BeautifulSoup
-import os
+from os import listdir
+from os import path
 
 class initialBookParse:
-    def __init__(self, inputFileName):
-        wantedTags = {}
-        try:
-            with open(str(inputFileName)) as fp:
-                soup = BeautifulSoup(fp, "html.parser")
-        except OSError as e:
-            print(e.filename)
-            
-        for item in soup.find_all('a'):
+    soup = BeautifulSoup()
+    input_file = ""
+
+    def __init__(self, input):
+        self.input_file = input
+
+    def get_list(self):
+        if not self.input_file[-5:] == ".html":
+            self.input_file = self.input_file + ".html"
+
+        with open(str(self.input_file)) as fp:
+            self.soup = BeautifulSoup(fp, features="html.parser")
+
+        wanted_tags = {}
+        for item in self.soup.find_all('a'):
             link = str(item['href'])
             title = str(item.contents)
 
@@ -18,20 +25,19 @@ class initialBookParse:
                 title = title.replace('"', '')
                 title = title.replace("'", '')
                 title = title[1:-36]
-                wantedTags[title] = link
-        return (wantedTags)
-        
-    def searchForFile(self):
-        htmlFiles = []
-        files = [f for f in os.listdir('.') if os.path.isfile(f)]
+                wanted_tags[title] = link
+        return (wanted_tags)
+
+    def search_for(self):
+        html_files = []
+        files = [f for f in listdir('.') if path.isfile(f)]
         for f in files:
-            print(f[-5:])
             if f[-5:] == ".html":
-                htmlFiles.append(f)
-        return (htmlFiles)
+                html_files.append(f)
+        return (html_files)
 
 def main(): 
-    self.initialBookParse(input("Enter a fileName"))
+    initialBookParse(input("Enter a fileName"))
 
 if __name__ == '__main__':
     main()
