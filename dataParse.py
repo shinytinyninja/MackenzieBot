@@ -41,12 +41,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-# url="https://mckenzieauction.hibid.com/lot/63736799/nova-switch-design-dinnerware-set-of-49-pc/?q=&ref=watch-list"
-
-# # Make a GET request to fetch the raw HTML content
-# html_content = requests.get(url).text
-
-# # Parse the html content
-# soup = BeautifulSoup(html_content, features="html.parser")
-# #print(soup.find(name = "th", text = "High Bid").find_next_sibling())
-# print(soup.find("span", {'class':'lot-high-bid'}))
