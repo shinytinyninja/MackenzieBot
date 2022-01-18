@@ -9,8 +9,10 @@ This bot, written in the python language, uses tkinter for its GUI, and htmpPars
     - Houses majority of the code needed to run the Tkinter GUI
 
 ## InitialBookParse.py
-    - Uses BeautifulSoup to parse an html file of saved bookmarks. I.E. a bulk download from Google chrome.
-    - This intial set-up, as we could not get python to directly communitcate with google chrome. As such, a small amount of human compulation is required.
+    - Uses BeautifulSoup to parse an html file of saved bookmarks. 
+    - I.E. a bulk download from Google chrome.
+    - This intial set-up, as we could not directly communitcate with chrome. 
+    - As such, a small amount of human compulation is required.
 
 ## DataParse
     - Stores a trimmed item name and full url in an easy to parse and read format. A csv
