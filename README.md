@@ -1,9 +1,9 @@
 # MackenzieBot
 ## Welcome!!
 
-MackenzieBot was initally built as a way for us to keep track of item prices of certian lots that caught our intrest. Who doesn't love an extremely competitive online bidding war dominated by robots? AARRGH!! Our bot only monitors these prices and does not bid for us.
+MackenzieBot was initally built as a way for us to keep track of item prices from a local auction house. We found that these auctions, which often deal with thousands of items, took too much of our time to parse through and keep up to date with item prices. As such, we created a program in Python to fulfill our goals.
 
-This bot, written in the python language, uses tkinter for its GUI, and htmpParser and BeautifulSoup to aquire and process the data.
+This program, written in the Python language, uses Tkinter for its GUI, and htmpParser and BeautifulSoup to aquire and process the data.
 
 ## Launcher.py
     - Houses majority of the code needed to run the Tkinter GUI
