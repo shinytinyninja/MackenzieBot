@@ -16,4 +16,6 @@ dataParse
     - Stores a trimmed item name and full url in an easy to parse and read format. A csv
 
 Google Drive link listed below to show initial brainstorming and thought processes
+![image](https://user-images.githubusercontent.com/43597960/150020087-a7e4f679-3e41-4598-93b9-b9769dc08c3e.png)
+
 https://drive.google.com/file/d/1_8nuOEgcEdqUWaNXo8vySlSrZyXrcyP_/view?usp=sharing
